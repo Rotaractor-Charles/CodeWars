@@ -116,3 +116,44 @@ function getGrade (s1, s2, s3) {
   }
 }
 console.log(getGrade(55,78,90))
+
+// Summation
+// Write a program that finds the summation of every number from 1 to num 
+// (both inclusive). The number will always be a positive integer greater than 0. 
+// Your function only needs to return the result, what is shown between parentheses 
+// in the example below is how you reach that result and it's not part of it, see the sample tests.
+
+// For example (Input -> Output):
+
+// 2 -> 3 (1 + 2)
+// 8 -> 36 (1 + 2 + 3 + 4 + 5 + 6 + 7 + 8)
+var summation = function (num) {
+  let arrayOfNumbers=[]
+  for(let i=1;i<=num;i++){
+    arrayOfNumbers.push(i)
+  }
+  return arrayOfNumbers.reduce((sum,current)=>sum+current,0)
+}
+
+console.log(summation(8))
+
+// Clock shows h hours, m minutes and s seconds after midnight.
+
+// Your task is to write a function which returns the time since midnight in milliseconds.
+
+// Example:
+// h = 0
+// m = 1
+// s = 1
+
+// result = 61000
+// Input constraints:
+
+// 0 <= h <= 23
+// 0 <= m <= 59
+// 0 <= s <= 59
+function past(h, m, s){
+  return (h*3600000)+(m*60000)+(s*1000)
+}
+
+console.log(past(1,1,1))
